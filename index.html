@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="assets/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="assets/main.js"></script>
+    <link rel="stylesheet" href="assets/personal-style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/bootstrap-4.0.0/dist/css/bootstrap.min.css"
+    />
+    <title>Busca Cep</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Consulta CEP</a>
+      <div class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Ex: 12345-678"
+          id="cep"
+        />
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          onclick="consultaCep()"
+        >
+          Buscar
+        </button>
+      </div>
+    </nav>
+
+    <div class="container barra-progresso">
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 100%"
+        ></div>
+      </div>
+    </div>
+
+    <main class="container cep">
+      <table class="table">
+        <thead class="head">
+          <h3 id="cepRequisition">CEP</h3>
+        </thead>
+        <div class="row">
+          <tbody>
+            <tr>
+              <td>Rua:</td>
+              <td id="logradouro"></td>
+            </tr>
+            <tr>
+              <td>Complemento:</td>
+              <td id="complemento"></td>
+            </tr>
+            <tr>
+              <td>Bairro:</td>
+              <td id="bairro"></td>
+            </tr>
+            <tr>
+              <td>Cidade:</td>
+              <td id="localidade"></td>
+            </tr>
+            <tr>
+              <td>Estado:</td>
+              <td id="uf"></td>
+            </tr>
+          </tbody>
+        </div>
+      </table>
+    </main>
+  </body>
+</html>
